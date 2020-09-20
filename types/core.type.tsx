@@ -4,4 +4,5 @@ export type RootStackParamList = {
 
 export interface DefaultPropTypes {
     children: JSX.Element | string
+    style?: object
 }
