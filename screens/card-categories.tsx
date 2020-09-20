@@ -1,10 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
+import { StyleSheet, View, StatusBar, Image } from 'react-native';
 
-import { lightThemeColors, TcText } from '../shared/themes';
+import { lightThemeColors, TcText, withShadow } from '../shared/themes';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function CardCategories() {
+export default function CardCategories({navigation}: any) {
+
+  const onLetsPlayPress = () => {
+    navigation.navigate('Players')
+  }
+
   return (
     <View style={styles.container}>
       <StatusBar hidden={false} backgroundColor={lightThemeColors.bg} barStyle="dark-content" />
@@ -14,8 +19,8 @@ export default function CardCategories() {
         </View>
       </View>
       <View style={styles.action}>
-        <TouchableOpacity style={styles.actionBtn}>
-          <TcText style={styles.actionBtnTxt}>
+        <TouchableOpacity style={styles.actionBtn} onPress={() => onLetsPlayPress()}>
+          <TcText style={styles.actionBtnTxt} mode='light'>
             Let's Play
           </TcText>
         </TouchableOpacity>
@@ -59,7 +64,8 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 50,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    ...withShadow
   },
   actionBtnTxt: {
     fontWeight: 'bold'

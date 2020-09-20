@@ -5,6 +5,7 @@ export default {
   config: {
     screens: {
       CardCategories: "CardCategories",
+      Players: "Players",
       NotFound: "*"
     }
   }

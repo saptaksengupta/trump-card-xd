@@ -5,3 +5,7 @@ export {
 }
 
 export {TcText} from './components';
+
+export {
+    withShadow
+} from './commonStyles';
