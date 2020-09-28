@@ -4,7 +4,7 @@ export type RootStackParamList = {
 };
 
 export interface DefaultPropTypes {
-    children: JSX.Element | string;
+    children?: JSX.Element | string;
     style?: object;
-    mode: 'light' | 'dark';
+    mode?: 'light' | 'dark';
 }

@@ -4,7 +4,7 @@ export {
     lightThemeColors
 }
 
-export {TcText} from './components';
+export {TcText, TcInput} from './components';
 
 export {
     withShadow
