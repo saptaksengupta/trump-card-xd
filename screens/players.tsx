@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, StatusBar, Text, Image } from "react-native";
-import { lightThemeColors, TcText, TcInput } from "../shared/themes";
-import { TcxProfileAvatar } from "../shared/components/profile-avatars";
+import { lightThemeColors, TcText, TcInput } from "themes/constants";
+import { TcxProfileAvatar } from "components/profile-avatars";
 
 const Players = (): JSX.Element => {
   return (
